@@ -1,0 +1,1 @@
+.grid{--min-width:250px;--gap:var(--s-5);display:grid;grid-gap:var(--gap)}@supports (width:min(var(--min-width),100%)){.grid{grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr))}}

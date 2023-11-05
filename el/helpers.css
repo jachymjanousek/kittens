@@ -1,0 +1,47 @@
+.py1 {
+  --px: var(--s1);
+}
+.px2 {
+  --px: var(--s2);
+}
+.px3 {
+  --px: var(--s3);
+}
+.px4 {
+  --px: var(--s4);
+}
+.px5 {
+  --px: var(--s5);
+}
+
+.py1 {
+  --py: var(--s1);
+}
+.py2 {
+  --py: var(--s2);
+}
+.py3 {
+  --py: var(--s3);
+}
+.py4 {
+  --py: var(--s4);
+}
+.py5 {
+  --py: var(--s5);
+}
+
+.space1 {
+  --space: var(--s1);
+}
+.space2 {
+  --space: var(--s2);
+}
+.space3 {
+  --space: var(--s3);
+}
+.space4 {
+  --space: var(--s4);
+}
+.space5 {
+  --space: var(--s5);
+}

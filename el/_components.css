@@ -1,0 +1,166 @@
+/*****************************************************************************
+
+                                      STACK
+
+/*****************************************************************************/
+.stack {
+  --space: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.stack > * + * {
+  margin-top: var(--space);
+}
+.stack.recursive * + * {
+  margin-top: var(--space);
+}
+
+
+/*****************************************************************************
+
+                                      BOX
+
+/*****************************************************************************/
+.box {
+  --p: var(--s0);
+  --px: var(--p);
+  --py: var(--p);
+  padding: var(--px) var(--py);
+  padding-top: var(--pt,var(--py));
+  padding-bottom: var(--pb,var(--py));
+  padding-left: var(--pl,var(--px));
+  padding-right: var(--pr,var(--px));
+
+  border: var(--border-thin) solid;
+  --color-light: #fff;
+  --color-dark: #000;
+  color: var(--color-dark);
+  /* background-color: var(--color-light); */
+}
+
+
+.box * {
+  color: inherit;
+}
+
+.box.invert {
+  color: var(--color-light);
+  background-color: var(--color-dark);
+}
+
+
+/*****************************************************************************
+
+                                      SIDEBAR
+
+/*****************************************************************************/
+
+.w-sidebar {
+  overflow: hidden;
+}
+
+.w-sidebar > * {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(var(--s1) / 2 * -1);
+}
+
+.w-sidebar > * > * {
+  margin: calc(var(--s1) / 2);
+  flex-grow: 1;
+}
+
+.w-sidebar:not(.right) > * > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(30% - var(--s1));
+}
+.w-sidebar.right > * > :first-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(30% - var(--s1));
+}
+
+/*****************************************************************************
+
+                                      CLUSTER
+
+/*****************************************************************************/
+.cluster {
+  overflow: hidden;
+}
+
+.cluster > * {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: calc(var(--space,var(--s1)) / 2 * -1);
+}
+.cluster.space-between > * {
+  justify-content: space-between;
+}
+
+.cluster > * > * {
+  margin: calc(var(--space,var(--s1)) / 2);
+}
+
+/*****************************************************************************
+
+                                      CENTER
+
+/*****************************************************************************/
+.center {
+  box-sizing: content-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--size);
+}
+
+/*****************************************************************************
+
+                                      SWITCHER
+
+/*****************************************************************************/
+.switcher > * {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc((var(--s1) / 2) * -1);
+}
+
+.switcher > * > * {
+  flex-grow: 1;
+  flex-basis: calc((var(--threshold) - (100% - var(--s1))) * 999);
+  margin: calc(var(--s1) / 2);
+}
+
+.switcher > * > :nth-last-child(n+4),
+.switcher > * > :nth-last-child(n+4) ~ * {
+  flex-basis: 100%;
+}
+
+/*****************************************************************************
+
+                                      GRID
+
+/*****************************************************************************/
+
+.grid {
+  --min-width: 250px;
+  --gap: var(--s-5);
+  display: grid;
+  grid-gap: var(--gap);
+}
+
+@supports (width: min(var(--min-width), 100%)) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  }
+}
