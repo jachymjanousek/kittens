@@ -9,12 +9,47 @@
     <meta name="keywords" content="Vojtěch Třísko, BCAA, cats, cat, fluffy Mr. Bubbles" />
     <meta name="author" content="all: Vojtěch Třísko;" />
 
-    <title>BCAA</title>
+    <title>BCAA | Breeds</title>
 
-    <link rel="stylesheet" href="el/index.css" />
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="typography.css" />
-    <link rel="stylesheet" href="media.css" />
+    <link rel="stylesheet" href="./../el/index.css" />
+    <link rel="stylesheet" href="./../main.css" />
+    <link rel="stylesheet" href="./../typography.css" />
+    <link rel="stylesheet" href="./../media.css" />
+
+    <style>
+      table {
+        font-family: Verdana;
+        font-size: 14px;
+        border-collapse: collapse;
+        width: 600px;
+      }
+
+      td,
+      th {
+        padding: 10px;
+        text-align: left;
+        margin: 0;
+      }
+
+      tbody tr:nth-child(2n) {
+        background-color: var(--bg-green);
+      }
+
+      th {
+        position: sticky;
+        top: 0;
+        background-color: #333;
+        color: white;
+      }
+
+      tbody > tr > td:first-child {
+        font-weight: bold;
+      }
+
+      tbody tr:nth-child(2n + 1) td {
+        background-color: var(--green);
+      }
+    </style>
   </head>
   <body>
     <header class="box cluster space-between">
@@ -39,7 +74,57 @@
         </ul>
       </nav>
     </header>
-    <main class="stack"></main>
+    <main class="stack">
+      <section class="stack">
+        <table style="width: 100%">
+          <tr>
+            <th>Breed</th>
+            <th>Characteristic</th>
+            <th>Temperament</th>
+          </tr>
+          <tr>
+            <td>Maine Coon</td>
+            <td>Large and robust with dense fur and a friendly tail.</td>
+            <td>Maine Coons are friendly, playful, and have a penchant for interacting with people.</td>
+          </tr>
+          <tr>
+            <td>Ragdoll</td>
+            <td>Soft fur and large blue eyes.</td>
+            <td>Ragdolls are very laid-back and loving cats, often going limp when held.</td>
+          </tr>
+          <tr>
+            <td>Scottish Fold</td>
+            <td>Distinctive folded ears.</td>
+            <td>Scottish Folds are generally peaceful and friendly.</td>
+          </tr>
+          <tr>
+            <td>Bengal Cat</td>
+            <td>Wild, spotted coat pattern reminiscent of a leopard.</td>
+            <td>Bengal cats are energetic, playful, and have strong hunting instincts.</td>
+          </tr>
+          <tr>
+            <td>Sphynx</td>
+            <td>Hairless with a warm skin.</td>
+            <td>Sphynx cats are affectionate and require special care due to the lack of fur.</td>
+          </tr>
+          <tr>
+            <td>Norwegian Forest Cat</td>
+            <td>Thick fur and a sturdy build.</td>
+            <td>Norwegian Forest Cats are active and loyal to their families.</td>
+          </tr>
+          <tr>
+            <td>Abyssinian Cat</td>
+            <td>Short, fine fur and a slender body.</td>
+            <td>Abyssinians are energetic, curious, and sociable cats.</td>
+          </tr>
+          <tr>
+            <td>British Shorthair</td>
+            <td>Short, dense fur and a compact body.</td>
+            <td>British Shorthairs are placid, friendly, and well-suited for families.</td>
+          </tr>
+        </table>
+      </section>
+    </main>
     <footer class="box" style="--pt: var(--s4)">
       <div class="cluster space-between">
         <p>“Because Cats Are Awesome” is not protected label. Feel free to share the Fluffiness majesty.</p>
